@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgencjaNieruchomosciModelStoreContainer" CdmEntityContainer="AgencjaNieruchomosci">
+    <EntitySetMapping Name="images">
+      <EntityTypeMapping TypeName="AgencjaNieruchomosciModel.images">
+        <MappingFragment StoreEntitySet="images">
+          <ScalarProperty Name="domId" ColumnName="domId" />
+          <ScalarProperty Name="imageData" ColumnName="imageData" />
+          <ScalarProperty Name="imagePath" ColumnName="imagePath" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="content_type" ColumnName="content_type" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dom">
+      <EntityTypeMapping TypeName="AgencjaNieruchomosciModel.dom">
+        <MappingFragment StoreEntitySet="dom">
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+          <ScalarProperty Name="contact_name" ColumnName="contact_name" />
+          <ScalarProperty Name="build_date" ColumnName="build_date" />
+          <ScalarProperty Name="bath_room_amount" ColumnName="bath_room_amount" />
+          <ScalarProperty Name="district" ColumnName="district" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="garage" ColumnName="garage" />
+          <ScalarProperty Name="building_area" ColumnName="building_area" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="bed_room_amount" ColumnName="bed_room_amount" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

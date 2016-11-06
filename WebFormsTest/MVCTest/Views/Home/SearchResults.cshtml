@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchResults</title>
+</head>
+<body>
+    <label id="title" class="title" style="font-size:xx-large">
+        Witamy w Agencji Nieruchomości.
+    </label>
+    <div class="comboBoxes">
+        <label id="search" class="searchLabel"> Wyszukaj nieruchomość: </label>
+        <div class="comboBox">
+            <label id="minimalPriceLabel" class="comboBoxLabel">Cena minimalna: </label>
+            <input id="minimalPriceTextBox" class="form-control" style="width: 200px;height: 30px;"></input>
+        </div>
+        <div class="comboBox">
+            <label id="maximalPriceLabel" class="comboBoxLabel">Cena maksymalna: </label>
+            <input id="maximalPriceTextBox" class="form-control" style="width: 200px; height:30px"></input>
+        </div>
+        <div class="comboBox">
+            <label id="bathRoomAmountLabel" class="comboBoxLabel">Ilość łazienek: </label>
+            <input id="bathRoomAmount" class="form-control" style="width:200px;height:30px" />
+        </div>
+        <div class="comboBox">
+            <label id="bedRoomAmountLabel" class="comboBoxLabel"> Ilość sypialni: </label>
+            <input id="bedRoomsAmount" class="form-control" style="width:200px;height:30px" />
+        </div>
+        <div class="comboBox">
+            <label id="streetLabel" class="comboBoxLabel"> Ulica: </label>
+            <input id="streetComboBox" class="form-control" style="width:200px; height:30px" />
+        </div>
+        <div class="searchButton">
+            <button id="searchButton" class="btn btn-default" @*onclick="searchButton_Click"*@>Szukaj</button>
+        </div>
+    </div>
+</body>
+</html>
