@@ -1,0 +1,197 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}
+
+.footer{
+    display: block;
+    margin-top: 800px;
+}
+
+.comboBoxes{
+    display: inline-block;
+    float: right;
+    margin-bottom: 20px;
+    width: 300px;
+    background-color: gray
+}
+
+.streetComboBox{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.comboBox{
+    display: block;
+    margin-left: 50px;
+    margin-top: 30px;
+    font-family: Verdana;
+}
+
+.comboBoxLabel{
+    display: block;
+    color: white;
+}
+
+.searchLabel{
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    font-family: Verdana;
+    text-align: center;
+}
+
+.searchButton{
+    display: inline-block;
+    margin-left: 116px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.title{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center
+}
+
+.mainViewPictures{
+    text-align: right;
+}
+
+.picture1{
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    float: left;
+}
+
+.picture2{    
+    width: 600px;
+    height: 400px;
+    border: 1px solid;
+    float: left;
+}
+
+.picture3{
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    float: left;
+}
+
+.picture4{
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    float: left;
+}
+
+.picture5{
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    float: left;
+}
+
+.picture6{
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    float: left;
+}
+
+.picture7{
+    position: absolute;
+    left: 92px;
+    top: 316px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    float: left;
+}
+
+.textBoxInAd{
+    display: inline-block;
+    position: absolute;
+    left: 300px;
+    margin-bottom: 20px;
+}
+
+.labelInAd{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.adControls{
+    display:inline-block;
+    margin-top: 30px;
+}
+
+.fileUpload{
+    display: inline-block;
+}
+
+.gridWithHomes{
+    display: inline-block;
+    float: left;
+}
+
+.gridsquare{
+    display: inline-block;
+    border: 1px solid;
+    border-color: lightgray;
+    width: 120px;
+}
+.firstRow{
+    display: inline-block;
+    border: 1px solid;
+    border-color: lightgray;
+    width: 120px;
+}
+
+.imagesGrid{
+    float: right;
+    width: 400px;
+}
+
+.detailsView{
+    float: left;
+    width: 600px;
+}

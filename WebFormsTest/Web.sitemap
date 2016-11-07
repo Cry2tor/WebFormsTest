@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Site/MainView" title="Agencja"  description="Strona Główna">
+    <siteMapNode url="~/Site/SearchResults" title="Wyniki wyszukiwania"  description="Wyniki wyszukiwania" >
+      <siteMapNode url="~/Site/DetailsView" title="Szczegóły ogłoszenia"  description="Szczegóły ogłoszenia" />
+    </siteMapNode>
+    <siteMapNode url="~/Site/AddAd" title="Dodaj ogłoszenie"  description="Dodaj ogłoszenie" />
+    <siteMapNode url="~/Contact" title="Kontakt"  description="Kontakt" />
+    <siteMapNode url="~/About" title="O firmie"  description="O firmie" />
+  </siteMapNode>
+</siteMap>

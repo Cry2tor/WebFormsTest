@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <label id="title" class="title" style="font-size:xx-large">
+        Wyniki wyszukiwania.
+    </label>
+    @using (Html.BeginForm())
+    { 
+    <div class="comboBoxes">
+        <label id="search" class="searchLabel"> Wyszukaj nieruchomość: </label>
+        <div class="comboBox">
+            <label id="minimalPriceLabel" class="comboBoxLabel">Cena minimalna: </label>
+            <input id="minimalPriceTextBox" class="form-control" style="width: 200px;height: 30px;"></input>
+        </div>
+        <div class="comboBox">
+            <label id="maximalPriceLabel" class="comboBoxLabel">Cena maksymalna: </label>
+            <input id="maximalPriceTextBox" class="form-control" style="width: 200px; height:30px"></input>
+        </div>
+        <div class="comboBox">
+            <label id="bathRoomAmountLabel" class="comboBoxLabel">Ilość łazienek: </label>
+            <input id="bathRoomAmount" class="form-control" style="width:200px;height:30px" />
+        </div>
+        <div class="comboBox">
+            <label id="bedRoomAmountLabel" class="comboBoxLabel"> Ilość sypialni: </label>
+            <input id="bedRoomsAmount" class="form-control" style="width:200px;height:30px" />
+        </div>
+        <div class="comboBox">
+            <label id="streetLabel" class="comboBoxLabel"> Ulica: </label>
+            <input id="streetComboBox" class="form-control" style="width:200px; height:30px" />
+        </div>
+        <div class="searchButton">
+            <input type="submit" id="searchButton" class="btn btn-default" title="Szukaj" onclick="location.href='@Url.Action("SearchButtonClick", "Site")'">
+        </div>
+    </div>
+    }
+    <div class="mainViewPictures">
+        <img id="picture1" class="picture1" src="~/images/home1.jpg"/>
+        <img id="picture2" class="picture2" src="~/images/home2.jpg" />
+        <img id="picture3" class="picture3" src="~/images/home3.jpg" />
+        <img id="picture4" class="picture4" src="~/images/home4.jpg" />
+        <img id="picture5" class="picture5" src="~/images/home5.jpg" />
+        <img id="picture6" class="picture6" src="~/images/home6.jpg" />
+        <img id="picture7" class="picture7" src="~/images/home7.jpg" />
+    </div>
+</body>
+
+</html>

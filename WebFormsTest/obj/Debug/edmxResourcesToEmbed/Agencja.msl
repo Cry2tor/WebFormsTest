@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgencjaNieruchomosciModelStoreContainer" CdmEntityContainer="AgencjaNieruchomosciEntities">
+    <EntitySetMapping Name="home">
+      <EntityTypeMapping TypeName="AgencjaNieruchomosciModel.home">
+        <MappingFragment StoreEntitySet="home">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="bathrooms" ColumnName="bathrooms" />
+          <ScalarProperty Name="bedrooms" ColumnName="bedrooms" />
+          <ScalarProperty Name="home_location" ColumnName="home_location" />
+          <ScalarProperty Name="contact_name" ColumnName="contact_name" />
+          <ScalarProperty Name="email_contact" ColumnName="email_contact" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="home_address" ColumnName="home_address" />
+          <ScalarProperty Name="square_feet" ColumnName="square_feet" />
+          <ScalarProperty Name="year_built" ColumnName="year_built" />
+          <ScalarProperty Name="garages" ColumnName="garages" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Images">
+      <EntityTypeMapping TypeName="AgencjaNieruchomosciModel.Images">
+        <MappingFragment StoreEntitySet="Images">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="image_path" ColumnName="image_path" />
+          <ScalarProperty Name="image_alt" ColumnName="image_alt" />
+          <ScalarProperty Name="ad_id" ColumnName="ad_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="AgencjaNieruchomosciModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

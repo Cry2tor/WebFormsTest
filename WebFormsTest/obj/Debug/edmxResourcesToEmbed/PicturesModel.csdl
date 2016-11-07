@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgencjaNieruchomosciModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="images">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="imageData" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="imagePath" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="insert_date" Type="DateTime" Precision="3" />
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="content_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="domId" Type="Int32" />
+    <NavigationProperty Name="dom" Relationship="AgencjaNieruchomosciModel.FK__images__domId__38996AB5" FromRole="images" ToRole="dom" />
+  </EntityType>
+  <EntityContainer Name="AgencjaNieruchomosci" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="images" EntityType="Self.images" />
+    <EntitySet Name="dom" EntityType="AgencjaNieruchomosciModel.dom" />
+    <AssociationSet Name="FK__images__domId__38996AB5" Association="AgencjaNieruchomosciModel.FK__images__domId__38996AB5">
+      <End Role="dom" EntitySet="dom" />
+      <End Role="images" EntitySet="images" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="dom">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="bed_room_amount" Type="Int32" />
+    <Property Name="street" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="building_area" Type="Int32" />
+    <Property Name="garage" Type="Int32" />
+    <Property Name="phone" Type="Int64" />
+    <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bath_room_amount" Type="Int32" />
+    <Property Name="build_date" Type="DateTime" Precision="0" />
+    <Property Name="contact_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="e_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="notes" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="images" Relationship="AgencjaNieruchomosciModel.FK__images__domId__38996AB5" FromRole="dom" ToRole="images" />
+  </EntityType>
+  <Association Name="FK__images__domId__38996AB5">
+    <End Type="AgencjaNieruchomosciModel.dom" Role="dom" Multiplicity="0..1" />
+    <End Type="AgencjaNieruchomosciModel.images" Role="images" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dom">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="images">
+        <PropertyRef Name="domId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

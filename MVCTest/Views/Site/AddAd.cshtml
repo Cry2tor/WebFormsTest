@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div class="form-horizontal">
+        <h1 class="title">Dodaj ogłoszenie: </h1>
+        <div class="form-group">
+            <label id="priceLabel" class="col-md-2 control-label"><b>Cena: </b></label>
+            <input id="priveTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="bedLabel" class="col-md-2 control-label"><b>Ile łazienek: </b></label>
+            <input id="bedTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="streetLabel" class="col-md-2 control-label"><b>Ulica: </b></label>
+            <input id="streetTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="buildingAreaLabel" class="col-md-2 control-label"><b>Powierzchnia: </b></label>
+            <input id="buildingAreaTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="garageLabel" class="col-md-2 control-label"><b>Ilość garaży: </b></label>
+            <input id="garageTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="phoneLabel" class="col-md-2 control-label"><b>Telefon: </b></label>
+            <input id="phoneTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="districtLabel" class="col-md-2 control-label"><b>Okręg: </b></label>
+            <input id="districtTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="bathLabel" class="col-md-2 control-label"><b>Ilość łazienek: </b></label>
+            <input id="bathTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="buildDateLabel" class="col-md-2 control-label"><b>Rok budowy: </b></label>
+            <input id="buildDateTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="contactNameLabel" class="col-md-2 control-label"><b>Imię i Nazwisko: </b></label>
+            <input id="contactNameTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="emailLabel" class="col-md-2 control-label"><b>Email: </b></label>
+            <input id="emailTextBox" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label id="noticesLabel" class="col-md-2 control-label"><b>Notatki:</b></label>
+            <input id="noticesTextBox" class="form-control" />
+        </div>
+        <div>
+            <button id="uploadButton" class="btn btn-default" onclick="location.href='@Url.Action("UploadButtonClick", "Site")'">Dodaj ogłoszenie: </button>
+        </div>
+    </div>
+</body>
+</html>

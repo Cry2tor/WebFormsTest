@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgencjaNieruchomosciModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="dom">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="price" Type="int" />
+    <Property Name="bed_room_amount" Type="int" />
+    <Property Name="street" Type="varchar" MaxLength="50" />
+    <Property Name="building_area" Type="int" />
+    <Property Name="garage" Type="int" />
+    <Property Name="phone" Type="bigint" />
+    <Property Name="district" Type="varchar" MaxLength="50" />
+    <Property Name="bath_room_amount" Type="int" />
+    <Property Name="build_date" Type="date" />
+    <Property Name="contact_name" Type="varchar" MaxLength="50" />
+    <Property Name="e_mail" Type="varchar" MaxLength="50" />
+    <Property Name="notes" Type="varchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="images">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="imageData" Type="varchar" MaxLength="255" />
+    <Property Name="imagePath" Type="varchar" MaxLength="255" />
+    <Property Name="insert_date" Type="datetime" />
+    <Property Name="title" Type="varchar" MaxLength="50" />
+    <Property Name="content_type" Type="varchar" MaxLength="50" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="domId" Type="int" />
+  </EntityType>
+  <Association Name="FK__images__domId__38996AB5">
+    <End Role="dom" Type="Self.dom" Multiplicity="0..1" />
+    <End Role="images" Type="Self.images" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dom">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="images">
+        <PropertyRef Name="domId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AgencjaNieruchomosciModelStoreContainer">
+    <EntitySet Name="dom" EntityType="Self.dom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="images" EntityType="Self.images" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__images__domId__38996AB5" Association="Self.FK__images__domId__38996AB5">
+      <End Role="dom" EntitySet="dom" />
+      <End Role="images" EntitySet="images" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
